@@ -27,8 +27,8 @@ public class BishopBlackTest extends TestCase {
 
     @Test
     public void testWay() {
-        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        Cell[] steps = bishopBlack.way(Cell.G5);
+        BishopBlack bishopBlack = new BishopBlack(Cell.C8);
+        Cell[] steps = bishopBlack.way(Cell.G4);
         for (Cell step : steps) {
             System.out.println(step);
         }
