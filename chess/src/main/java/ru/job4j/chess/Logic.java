@@ -1,10 +1,11 @@
 package ru.job4j.chess;
 
+import java.util.Arrays;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
-import java.util.Arrays;
 
 public final class Logic {
+
     private final Figure[] figures = new Figure[32];
     private int index = 0;
 
@@ -13,7 +14,7 @@ public final class Logic {
     }
 
     public void move(Cell source, Cell dest)
-            throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
+        throws FigureNotFoundException, ImpossibleMoveException, OccupiedCellException {
         int index = findBy(source);
         Cell[] steps = figures[index].way(dest);
         free(steps);
@@ -21,6 +22,13 @@ public final class Logic {
     }
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
+        for (int i = 0; i < steps.length; i++) {
+            for (int j = 0; j < figures.length; j++) {
+                if (figures[j].position().equals(steps[i])) {
+                    throw new OccupiedCellException();
+                }
+            }
+        }
         return true;
     }
 

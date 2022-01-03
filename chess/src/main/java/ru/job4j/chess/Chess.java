@@ -15,8 +15,18 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
-import ru.job4j.chess.firuges.black.*;
-import ru.job4j.chess.firuges.white.*;
+import ru.job4j.chess.firuges.black.BishopBlack;
+import ru.job4j.chess.firuges.black.KingBlack;
+import ru.job4j.chess.firuges.black.KnightBlack;
+import ru.job4j.chess.firuges.black.PawnBlack;
+import ru.job4j.chess.firuges.black.QueenBlack;
+import ru.job4j.chess.firuges.black.RookBlack;
+import ru.job4j.chess.firuges.white.BishopWhite;
+import ru.job4j.chess.firuges.white.KingWhite;
+import ru.job4j.chess.firuges.white.KnightWhite;
+import ru.job4j.chess.firuges.white.PawnWhite;
+import ru.job4j.chess.firuges.white.QueenWhite;
+import ru.job4j.chess.firuges.white.RookWhite;
 
 public final class Chess extends Application {
     private static final String JOB4J = "Шахматы на www.job4j.ru";
