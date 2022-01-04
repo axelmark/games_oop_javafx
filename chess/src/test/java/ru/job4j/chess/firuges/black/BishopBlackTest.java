@@ -7,7 +7,7 @@ import org.junit.Test;
 import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.Figure;
 
-public class BishopBlackTest  {
+public class BishopBlackTest {
 
     @Test
     public void testPosition() {
@@ -27,10 +27,12 @@ public class BishopBlackTest  {
     @Test
     public void testWay() {
         BishopBlack bishopBlack = new BishopBlack(Cell.C8);
-        Cell[] steps = bishopBlack.way(Cell.G4);
+        Cell[] steps = bishopBlack.way(Cell.E6);
         for (Cell step : steps) {
             System.out.println(step);
         }
+        assertThat(steps[0].toString(), is("D7"));
+        assertThat(steps[1].toString(), is("E6"));
 
     }
 
