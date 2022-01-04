@@ -33,7 +33,6 @@ public class BishopBlackTest {
         }
         assertThat(steps[0].toString(), is("D7"));
         assertThat(steps[1].toString(), is("E6"));
-
     }
 
     @Test
